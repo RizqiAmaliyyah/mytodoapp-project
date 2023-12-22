@@ -7,9 +7,9 @@
 
 .jumbotron {
   font-size: 32px;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: rgba(0, 0, 0, 0.773);
-  text-align: center;
+  /* text-align: center; */
   color: white;
   border-bottom: 1px solid grey;
 }

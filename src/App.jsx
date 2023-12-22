@@ -11,8 +11,8 @@ const App = () => {
     <>
     <div>
       <header>
-        <div className="jumbotron">
-          <h1>
+        <div className="px-8 py-8 text-justify text-white jumbotron">
+          <h1 className=''>
             My Todo<br />
             <span>App🕗📜</span>
           </h1>
