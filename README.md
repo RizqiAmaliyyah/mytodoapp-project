@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 - yang belum jalan:
 Routing dari navbar dan filter to-do berdasarkan statusnya
+Belum menggunakan state management redux atau contex (masih proses memahami)
