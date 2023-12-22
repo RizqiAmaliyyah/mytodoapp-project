@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Button from './Button'
+import PropTypes from 'prop-types'
 
-export default function TodoList() {
+/// prop-types di placeholder belum bisa jalan
+export default function TodoList(props) {
 
   const [input, setInput] = useState('')
   const [todos, setTodos] = useState([
@@ -42,11 +44,6 @@ export default function TodoList() {
     }
   }
 
-  // const [isChecked, setIsChecked] = useState(false);
-  // const handleCheckboxChange = () => {
-  //   setIsChecked(!isChecked);
-  // };
-
   const [checkedItems, setCheckedItems] = useState({});
   
   const handleCheckboxChange = (itemId) => {
@@ -61,9 +58,11 @@ export default function TodoList() {
     <>
     <div>
       <form>
-      <input type="text" value={input} onChange={handleInput} className="placeholder-gray-500 p-3 m-2 rounded-lg border-2 border-black bg-white" placeholder="Tulis disini ya"></input>
+      <input type="text" value={input} onChange={handleInput} className="placeholder-gray-500 p-3 m-2 rounded-lg border-2 border-black bg-white" placeholder = "Tulis disini ya">{props.input}</input>
       <Button buttonText="Simpan" onClick={addTodo}/>
       </form>
+
+      {/* <Form/> */}
 
       <div className=" flex flex-col items-center justify-items-center border-2 border-gray-300 bg-white">
         
@@ -84,4 +83,8 @@ export default function TodoList() {
     </div>
     </>
   )
+}
+
+TodoList.propTypes = {
+  input: PropTypes.string.isRequired,
 }

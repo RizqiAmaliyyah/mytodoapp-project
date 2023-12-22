@@ -1,4 +1,4 @@
- function Navbar() {
+export default function Navbar() {
   return (
     <nav className="bg-gray-50 dark:bg-gray-600">
       <div className="max-w-screen-xl px-4 py-3 mx-auto">
@@ -15,5 +15,3 @@
     </nav>
   )
 }
-
-export default Navbar
