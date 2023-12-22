@@ -13,14 +13,16 @@ const App = () => {
   return (
     <>
     
-    <header>
-      <div className="jumbotron">
-        <h1>
-          My Todo<br />
-          <span>App 🕗📜</span>
-        </h1>
-      </div>
-    </header> 
+    <div>
+      <header>
+        <div className="jumbotron">
+          <h1>
+            My Todo<br />
+            <span>App🕗📜</span>
+          </h1>
+        </div>
+      </header> 
+    </div>
 
     <div className="grid bg-gray-200">
       
