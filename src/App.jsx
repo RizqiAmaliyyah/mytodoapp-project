@@ -7,12 +7,8 @@ import Navbar from './components/Navbar'
 import TodoList from './components/TodoList'
 
 const App = () => {
-
-
-
   return (
     <>
-    
     <div>
       <header>
         <div className="jumbotron">
