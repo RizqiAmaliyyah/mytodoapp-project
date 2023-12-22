@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import Button from './Button'
 import PropTypes from 'prop-types'
+import Swal from 'sweetalert2'
 
-/// prop-types di placeholder belum bisa jalan
+
+/// prop-types di placeholder sudah bisa jalan, cuman belum akurat
 export default function TodoList(props) {
 
   const [input, setInput] = useState('')
@@ -20,7 +22,17 @@ export default function TodoList(props) {
     event.preventDefault()
     console.log(input);
 
-    let newTodo = {
+    if (!input.trim()) {
+      Swal.fire({
+        title: 'Loh loh loh 👀 todonya lupa nih!',
+        text : 'Isi dulu ya 🖊📝!',
+        icon: 'question',
+        confirmButtonText: 'Wokeh 🦾'
+      });
+      return;
+    }
+
+    const newTodo = {
       id: new Date(),
       value: input
     }
