@@ -4,8 +4,8 @@ export default function Navbar() {
       <div className="max-w-screen-xl px-4 py-3 mx-auto">
         <div className="flex items-center justify-center">
           
-          <ul className="flex flex-row  text-2xl font-semibold mt-0 space-x-8 rtl:space-x-reverse">
-            <li className="hover:underline ">All</li>
+          <ul className="cursor-pointer flex flex-row  text-2xl font-semibold mt-0 space-x-8 rtl:space-x-reverse">
+            <li className=" hover:underline ">All</li>
             <li className="hover:underline">Active</li>
             <li className="hover:underline">Completed</li>
           </ul>
