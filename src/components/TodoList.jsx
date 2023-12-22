@@ -65,12 +65,12 @@ export default function TodoList() {
       <Button buttonText="Simpan" onClick={addTodo}/>
       </form>
 
-      <div className=" flex flex-col items-center justify-center border-2 border-gray-300 bg-white">
+      <div className=" flex flex-col items-center justify-items-center border-2 border-gray-300 bg-white">
         
         {todos.map((item) => (
         
-          <li className="list-none border-b-2  border-gray-400 py-2 px-4 " key={item.id}>
-            <input type="checkbox" className=" checked:border-green-500 checked:bg-green-500" checked={checkedItems[item.id] || false} onChange={() => handleCheckboxChange(item.id)}></input>
+          <li className="flex items-center justify-center text-xl font-semibold space-x-4 list-none border-b-2 border-gray-400 py-2 px-4 " key={item.id}>
+            <input id="checkbox" type="checkbox" className="w-4 h-4 " checked={checkedItems[item.id] || false} onChange={() => handleCheckboxChange(item.id)}></input>
             <span style={{ textDecoration: checkedItems[item.id] ? 'line-through' : 'none' }}>
               {item.value}
             </span>
